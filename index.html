@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="Viewfinder is an interactive toolkit designed to facilitate ethical reflection about AI implementation in libraries and archives from different stakeholder perspectives.">
+    <meta name="keywords" content="AI ethics, libraries, archives, ethical reflection, stakeholder perspectives, library technology">
+    <meta name="author" content="Montana State University, University of Montana, James Madison University, Iowa State University">
+    <meta name="theme-color" content="#4677B1">
+    <meta name="color-scheme" content="light">
+    <meta name="application-name" content="Viewfinder">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Viewfinder">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <link rel="preload" href="./images/logo.png" as="image">
+    <link rel="preload" href="./images/logo-desktop.png" as="image">
+    <title>Viewfinder: A toolkit for values-driven AI in libraries &amp; archives</title>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Mobile Header -->
+   <div class="mobile-header" style="display: none;">
+        <div class="mobile-header-inner">
+            <div class="mobile-logo">
+                <a href="./index.html">
+                  <img src="./images/logo.png" alt="Viewfinder Logo" class="mobile-logo-image" />
+                </a>
+                <div class="mobile-logo-descriptor">
+                    A toolkit for values-driven AI in libraries and archives
+                </div>
+              </div>
+        <button class="mobile-instructions-btn" onclick="toggleMobileInstructions()">
+            Instructions
+        </button>
+        </div>
+    </div>
+
+    <!-- Desktop Wizard -->
+    <div class="desktop">
+        <!-- Sidebar with Instructions -->
+        <div class="sidebar-overlay"></div>
+        <aside class="desktop-sidebar" role="complementary" aria-label="Instructions and Information">
+            <!-- Logo container - always visible -->
+            <div class="logo-container" role="banner">
+                <div class="logo-link">
+                    <a href="./index.html" aria-label="Return to Viewfinder home">
+                        <img src="./images/logo-desktop.png" alt="" class="desktop-logo-image" />
+                    </a>
+                </div>
+                <div class="tagline-container">
+                    <span class="tagline">A toolkit for values-driven AI in libraries and archives</span>
+                </div>
+            </div>
+
+            <button class="instructions-toggle" 
+                    aria-expanded="false"
+                    aria-controls="instructions-container"
+                    aria-label="Toggle instructions panel"
+                    onclick="toggleInstructions()">
+                <span class="toggle-icon" aria-hidden="true"></span>
+            </button>
+    
+            <!-- Collapsible instructions container -->
+            <div class="instructions-container" 
+                id="instructions-container" 
+                role="region" 
+                aria-label="Instructions and About">
+                <!-- Tab Navigation -->
+                <nav class="sidebar-tabs" role="tablist" aria-label="Instructions and About sections">
+                    <button class="sidebar-tab active" 
+                        data-tab="instructions"
+                        role="tab"
+                        aria-selected="true"
+                        aria-controls="instructions-panel"
+                        id="instructions-tab">
+                        Instructions
+                    </button>
+                    <button class="sidebar-tab" 
+                        data-tab="about"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="about-panel"
+                        id="about-tab">
+                        About Us
+                    </button>
+                </nav>
+
+                <!-- Instructions Tab Content -->
+                <div class="sidebar-content-panel active" 
+                    id="instructions-panel" 
+                    role="tabpanel"
+                    aria-labelledby="instructions-tab">
+                    <div class="worksheet-form" role="region"       aria-label="Worksheet instructions">
+
+                        <div class="sidebar">
+                            <h4>About This Toolkit</h4>
+                            <p>This toolkit facilitates ethical reflection about AI scenarios in libraries and archives from different stakeholder perspectives.
+                            <a href="https://osf.io/yue9s">Download a printable version here.</a>
+                        </div>
+
+                        <div class="sidebar">
+                            <h4>Introduction</h4>
+                            <p>There are three different sections of this toolkit: Scenarios, Stakeholders, Values.</p>
+                        </div>
+
+                        <div class="sidebar">
+                            <h5 class="step-heading">Step 1: Choose Scenario <br>(2 min)</h5>
+                            <p>Select one scenario card OR draft your own AI implementation project or scenario.</p>
+                        </div>
+
+                        <div class="sidebar">
+                            <h5 class="step-heading">Step 2: Your Values <br>(5 min)</h5>
+                            <p>Consider which values are of concern to you in your scenario. Identify 3 values that are of most concern.</p>
+                        </div>
+
+                        <div class="sidebar">
+                            <h5 class="step-heading">Step 3: Choose Stakeholder <br>(2 min)</h5>
+                            <p>Now choose a stakeholder card at random that represents a different perspective from your own.</p>
+                        </div>
+
+                        <div class="sidebar">
+                            <h5 class="step-heading">Step 4: Stakeholder Values <br>(5 min)</h5>
+                            <p>Consider which values are of concern to that stakeholder. Identify 3 values that are of most concern.</p>
+                        </div>
+
+                        <div class="sidebar">
+                            <h5 class="step-heading">Step 5: Reflection Prompts <br>(15 min)</h5>
+                            <p>Reflect on and respond to the Reflection Prompts. Record notes and key insights in the worksheet.</p>
+                        </div>
+                        <div class="sidebar">
+                            <h5 class="step-heading">Play Again <br></h5>
+                            <p>Print your results, and play again for more insights!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Us Tab Content -->
+                <div class="sidebar-content-panel" 
+                    id="about-panel"
+                    role="tabpanel"
+                    aria-labelledby="about-tab"
+                    tabindex="0">
+                    <div class="worksheet-form">
+                        <div class="sidebar">
+                            <h4>Project Background</h4>
+                            <p style="word-wrap: break-word; overflow-wrap: break-word;">
+                        Viewfinder is a participatory toolkit designed to facilitate ethical reflection about responsible AI in libraries and archives from different stakeholder perspectives.</p>
+                            <br>
+                            <p style="word-wrap: break-word; overflow-wrap: break-word;">Viewfinder was developed by librarians at Montana State University, University of Montana, James Madison University, and Iowa State University, based on research conducted between 2022 and 2025, made possible in part by funding from the Institute of Museum and Library Services.</p>
+                            <br>
+                            <p style="word-wrap: break-word; overflow-wrap: break-word;">
+                            For more information on the project, please see: <br>
+                            <a href="https://www.lib.montana.edu/responsible-ai/" style="word-break: break-all;">https://www.lib.montana.edu/responsible-ai/</a> 
+                            <br><br>
+                            Our project documentation on OSF: <br>
+                            <a href="https://doi.org/10.17605/OSF.IO/RE2X7" style="word-break: break-all;">https://doi.org/10.17605/OSF.IO/RE2X7</a></p>
+                        </div>
+
+                        <div class="sidebar">
+                            <h4>License & Usage</h4>
+                            <p style="word-wrap: break-word; overflow-wrap: break-word;">
+                                Licensed under CC BY 4.0 • Version 1.0 | 2025
+                                <br><a href="https://osf.io/yue9s" target="_blank">Download PDF Version</a>
+                                <br><a href="https://doi.org/10.17605/OSF.IO/RE2X7" target="_blank">Full Documentation</a>
+                            </p>
+                        </div>
+
+                        <div class="sidebar">
+                            <h4>Project Partners</h4>
+                            <div class="about-logos">
+                                <div class="about-logo">
+                                    <img src="./images/UM.png" alt="University of Montana" />
+                                </div>
+                                <div class="about-logo">
+                                    <img src="./images/MSU.png" alt="Montana State University" />
+                                </div>
+                                <div class="about-logo">
+                                    <img src="./images/JMU.png" alt="James Madison University" />
+                                </div>
+                                <div class="about-logo">
+                                    <img src="./images/ISU.png" alt="Iowa State University" />
+                                </div>
+                                <div class="about-logo">
+                                    <img src="./images/IMLS.png" alt="Institute of Museum and Library Services" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="desktop-content">
+            <h1 class="sr-only">Viewfinder: AI Values Assessment Tool</h1>
+            <!-- Header with Progress -->
+            <div class="desktop-header">
+                <div class="progress" role="progressbar" aria-label="Progress through steps" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1">
+                    <div class="progress-step current" id="progress-1" role="presentation"></div>
+                    <div class="progress-step" id="progress-2" role="presentation"></div>
+                    <div class="progress-step" id="progress-3" role="presentation"></div>
+                    <div class="progress-step" id="progress-4" role="presentation"></div>
+                    <div class="progress-step" id="progress-5" role="presentation"></div>
+                </div>
+                <h2 class="desktop-title" id="desktopTitle">Step 1: Select Scenario</h2>
+                <h3 class="desktop-subtitle" id="desktopSubtitle">Choose an AI scenario to explore</h3>
+            </div>
+
+            <div class="desktop-main">
+                <!-- Step 1: Scenario Selection -->
+                <div class="step active" 
+                     id="step-1" 
+                     aria-labelledby="step1-heading">
+                    <h1 id="step1-heading" tabindex="-1">Choose Your Scenario</h1>
+                    <p>Select one scenario card that represents an AI implementation you want to explore, or create your own custom scenario.</p>
+                    
+                    <fieldset class="step-fieldset">
+                        <legend class="sr-only">Available AI Scenarios - Select One</legend>
+                        <div class="cards-grid" role="group" aria-label="Available AI scenarios">
+                            <div class="scenario-card" 
+                             onclick="selectScenario(this, 'article-summary')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectScenario(this, 'article-summary'); }"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false">
+                            <div class="scenario-card-header"></div>
+                            <div>
+                                <h3>Article Summaries</h3>
+                                <p>A third-party service that uses AI to generate brief summaries of research articles for students and faculty.</p>
+                            </div>
+                            <div class="scenario-card-stage">Project Stage: </br>Post-implementation</div>
+                        </div>
+
+                        <div class="scenario-card" 
+                             onclick="selectScenario(this, 'chatbot-reference')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectScenario(this, 'chatbot-reference'); }"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="chatbot-reference-title"
+                             aria-describedby="chatbot-reference-description">
+                            <div class="scenario-card-header"></div>
+                            <div>
+                                <h3 id="chatbot-reference-title">Chatbot Reference</h3>
+                                <p id="chatbot-reference-description">A third-party AI chatbot to provide online reference for students on evenings and weekends.</p>
+                            </div>
+                            <div class="scenario-card-stage" aria-label="Project Stage: Information gathering stage, pre-implementation">
+                                Project stage: <br>Information gathering stage, pre-implementation
+                            </div>
+                        </div>
+
+                        <div class="scenario-card" 
+                             onclick="selectScenario(this, 'automated-metadata')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectScenario(this, 'automated-metadata'); }"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="automated-metadata-title"
+                             aria-describedby="automated-metadata-description">
+                            <div class="scenario-card-header"></div>
+                            <div>
+                                <h3 id="automated-metadata-title">Automated Metadata</h3>
+                                <p id="automated-metadata-description">A locally-built computer vision tool to create metadata for classification and discovery of digital photographs documenting labor organizing in your area.</p>
+                            </div>
+                            <div class="scenario-card-stage" aria-label="Project Stage: Mid-implementation, testing the tool on some photographs">
+                                Project Stage: <br>Mid-implementation, testing the tool on some photographs.
+                            </div>
+                        </div>
+
+                        <div class="scenario-card" 
+                             onclick="selectScenario(this, 'resource-recommendations')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectScenario(this, 'resource-recommendations'); }"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="resource-recommendations-title">
+                            <div class="scenario-card-header"></div>
+                            <div>
+                                <h3 id="resource-recommendations-title">Resource Recommendations</h3>
+                                <p>An open source, AI-powered resource recommender system to help users more easily search and find resources they need from the library databases.</p>
+                            </div>
+                            <div class="scenario-card-stage" aria-label="Project Stage: Post-implementation">
+                                <span class="stage-label">Project Stage:</span>
+                                <br>
+                                Post-implementation.
+                            </div>
+                        </div>
+
+                            <div class="scenario-card    custom-scenario-card"
+                             onclick="selectScenario(this, 'custom-scenario')"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="custom-scenario-label">
+                                <div class="scenario-card-header"></div>
+                                <h3 id="custom-scenario-label">Custom Scenario</h3>
+                                <label for="custom-scenario" class="sr-only">Describe your own AI scenario in 200 words or less.</label>
+                                <textarea 
+                                    id="custom-scenario" 
+                                    placeholder="Describe your own AI scenario (200 characters max)..."
+                                    maxlength="200"
+                                    oninput="updateCustomScenario(this)"
+                                    aria-labelledby="custom-scenario-label"
+                                    aria-describedby="custom-scenario-count"
+                                    aria-required="true"
+                                ></textarea>
+                                <div class="character-count" id="custom-scenario-count" aria-live="polite">
+                                    <span class="current-count">0</span>/200 characters
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <!-- Step 2: Your Values -->
+<!-- Step 2: Your Values -->
+                <div class="step" 
+                     id="step-2"
+                     aria-labelledby="step2-heading">
+                    <h1 id="step2-heading" tabindex="-1">Select Your Values</h1>
+                    <p>Consider which values are of concern to you in your scenario. Identify 3 values that are of most concern.
+</p>
+                    
+                    <div class="selection-counter" id="user-counter">
+                        0/3 values selected
+                    </div>
+                    
+                    <fieldset class="step-fieldset">
+                        <legend class="sr-only">Your Values - Select Exactly 3</legend>
+                        <div class="cards-grid">
+                            <div class="value-card"
+                             onclick="selectValue(this, 'Privacy and Consent', 'user')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Privacy and Consent', 'user'); }"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-label="Select Privacy and Consent value">
+                            <div class="value-card-header"></div>
+                            <h3>Privacy and Consent</h3>
+                            <ul>
+                                <li>User choice</li>
+                                <li>Data protections</li>
+                            </ul>
+                        </div>
+
+                        <div class="value-card"
+                             onclick="selectValue(this, 'Fiscal Responsibility', 'user')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Fiscal Responsibility', 'user'); }"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="fiscal-responsibility-title"
+                             aria-describedby="fiscal-responsibility-description">
+                            <div class="value-card-header"></div>
+                            <h3 id="fiscal-responsibility-title">Fiscal Responsibility</h3>
+                            <ul id="fiscal-responsibility-description">
+                                <li>Budget considerations</li>
+                                <li>Personnel impacts</li>
+                            </ul>
+                        </div>
+
+                        <div class="value-card"
+                             onclick="selectValue(this, 'Alignment', 'user')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Alignment', 'user'); }"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="alignment-title"
+                             aria-describedby="alignment-description">
+                            <div class="value-card-header"></div>
+                            <h3 id="alignment-title">Alignment</h3>
+                            <ul id="alignment-description">
+                                <li>Applying existing guidelines</li>
+                                <li>Professional codes of ethics</li>
+                            </ul>
+                        </div>
+
+                        <div class="value-card"
+                             onclick="selectValue(this, 'Education', 'user')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Education', 'user'); }"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="education-title"
+                             aria-describedby="education-description">
+                            <div class="value-card-header"></div>
+                            <h3 id="education-title">Education</h3>
+                            <ul id="education-description">
+                                <li>Understanding AI operations</li>
+                                <li>AI impacts on student research and student learning experiences</li>
+                                <li>Plagiarism</li>
+                            </ul>
+                        </div>
+
+                        <div class="value-card"
+                             onclick="selectValue(this, 'Care', 'user')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Care', 'user'); }"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="care-title"
+                             aria-describedby="care-description">
+                            <div class="value-card-header"></div>
+                            <h3 id="care-title">Care</h3>
+                            <ul id="care-description">
+                                <li>Concern for harms</li>
+                                <li>Relationships</li>
+                                <li>Community</li>
+                            </ul>
+                        </div>
+
+                        <div class="value-card"
+                             onclick="selectValue(this, 'Human-centeredness', 'user')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Human-centeredness', 'user'); }"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="human-centeredness-title"
+                             aria-describedby="human-centeredness-description">
+                            <div class="value-card-header" aria-hidden="true"></div>
+                            <h3 id="human-centeredness-title">Human-centeredness</h3>
+                            <ul id="human-centeredness-description">
+                                <li>Usefulness to human endeavour</li>
+                                <li>Labor considerations</li>
+                                <li>Including people in AI— i.e., human-in-the-loop</li>
+                            </ul>
+                        </div>
+
+                        <div class="value-card"
+                             onclick="selectValue(this, 'Trust', 'user')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Trust', 'user'); }"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="trust-title"
+                             aria-describedby="trust-description">
+                            <div class="value-card-header" aria-hidden="true"></div>
+                            <h3 id="trust-title">Trust</h3>
+                            <ul id="trust-description">
+                                <li>Transparency</li>
+                                <li>Making sources visible</li>
+                                <li>Clarity about AI implementation</li>
+                                <li>Accuracy of AI's output</li>
+                                <li>Intellectual Property</li>
+                            </ul>
+                        </div>
+
+                        <div class="value-card"
+                             onclick="selectValue(this, 'Social Responsibility', 'user')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Social Responsibility', 'user'); }"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="social-responsibility-title"
+                             aria-describedby="social-responsibility-description">
+                            <div class="value-card-header"></div>
+                            <h3 id="social-responsibility-title">Social Responsibility</h3>
+                            <ul id="social-responsibility-description">
+                                <li>Diversity</li>
+                                <li>Inclusion</li>
+                                <li>Environmental sustainability</li>
+                                <li>Bias</li>
+                            </ul>
+                        </div>
+
+                        <div class="value-card"
+                             onclick="selectValue(this, 'Service Quality', 'user')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Service Quality', 'user'); }"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="service-quality-title"
+                             aria-describedby="service-quality-description">
+                            <div class="value-card-header"></div>
+                            <h3 id="service-quality-title">Service Quality</h3>
+                            <ul id="service-quality-description">
+                                <li>Integrity of the library</li>
+                                <li>Ensuring the library's ability to deliver quality services</li>
+                            </ul>
+                        </div>
+
+                        <div class="value-card custom-value-card custom-user-value"
+                            onclick="selectValue(this, 'Custom Value 1', 'user')"
+                            role="button"
+                            tabindex="0"
+                            aria-label="Add custom value"
+                            aria-pressed="false">
+                            <div class="value-card-header"></div>
+                            <h3 id="custom-value-user-label">Custom Value 1</h3>
+                            <label for="custom-value-user" class="sr-only">Enter a custom value description. Maximum 200 characters.</label>
+                            <textarea 
+                                id="custom-value-user" 
+                                placeholder="Describe another value (200 characters max)..."
+                                maxlength="200"
+                                oninput="updateCustomValue(this, 'user')"
+                                onclick="event.stopPropagation()"
+                                aria-labelledby="custom-value-user-label"
+                                aria-describedby="value-char-hint-user"
+                                aria-required="true"
+                            ></textarea>
+                            <div class="character-count" id="value-char-count-user" aria-live="polite">
+                                <span class="current-count">0</span>/200
+                            </div>
+                            <span id="value-char-hint-user" class="sr-only">
+                                Press Enter or Space to edit the custom value description
+                            </span>
+                        </div>
+                            <div class="value-card add-value-button" 
+                                 onclick="addCustomValueCard()"
+                                 onkeydown="if(event.key === 'Enter') { event.preventDefault(); addCustomValueCard(); }"
+                                 role="button"
+                                 tabindex="0"
+                                 aria-label="Add custom value"
+                                 id="add-value-button">
+                                <div class="add-value-icon" aria-hidden="true">+</div>
+                                <div class="add-value-text">Add Custom Value</div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <!-- Step 3: Select Stakeholder -->
+                <div class="step" 
+                     id="step-3"
+                     aria-labelledby="step3-heading">
+                    <h1 id="step3-heading" tabindex="-1">Select Stakeholder</h1>
+                    <p>Choose one stakeholder representing a different perspective from your own.</p>
+                    
+                    <fieldset class="step-fieldset">
+                        <legend class="sr-only">Available Stakeholders - Select One</legend>
+                        <div class="cards-grid">
+                            <div class="stakeholder-card"
+                             data-type="faculty"
+                             onclick="selectStakeholder(this, 'faculty')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectStakeholder(this, 'faculty'); }"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-label="Select Faculty stakeholder">
+                            <div class="stakeholder-card-header"></div>
+                            <h3>Faculty</h3>
+                            <p>Teaching and research staff who rely on library collections and services for academic work.</p>
+                        </div>
+
+                        <div class="stakeholder-card" 
+                             data-type="student"
+                             onclick="selectStakeholder(this, 'student')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectStakeholder(this, 'student'); }"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="student-title"
+                             aria-describedby="student-description">
+                            <div class="stakeholder-card-header"></div>
+                            <h3 id="student-title">Student</h3>
+                            <p id="student-description">Undergraduate and graduate students using library resources for research and coursework.</p>
+                        </div>
+                        <div class="stakeholder-card" data-type="patron"
+                             onclick="selectStakeholder(this, 'patron')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectStakeholder(this, 'patron'); }"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="patron-title"
+                             aria-describedby="patron-description">
+                            <div class="stakeholder-card-header"></div>
+                            <h3 id="patron-title">Patron/Community Member</h3>
+                            <p id="patron-description">Local community members who use library services and resources.</p>
+                        </div>
+                        <div class="stakeholder-card" data-type="library-administrator"
+                             onclick="selectStakeholder(this, 'library-administrator')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectStakeholder(this, 'library-administrator'); }"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="library-administrator-title"
+                             aria-describedby="library-administrator-description">
+                            <div class="stakeholder-card-header"></div>
+                            <h3 id="library-administrator-title">Library Administrator</h3>
+                            <p id="library-administrator-description">Library directors and senior management responsible for strategic decisions and policy.</p>
+                        </div>
+
+                        <div class="stakeholder-card" data-type="vendor"
+                             onclick="selectStakeholder(this, 'vendor')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectStakeholder(this, 'vendor'); }"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="vendor-title"
+                             aria-describedby="vendor-description">
+                            <div class="stakeholder-card-header"></div>
+                            <h3 id="vendor-title">Vendor</h3>
+                            <p id="vendor-description">External companies and service providers offering AI tools and technologies to libraries.</p>
+                        </div>
+
+                        <div class="stakeholder-card" data-type="researcher"
+                             onclick="selectStakeholder(this, 'researcher')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectStakeholder(this, 'researcher'); }"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="researcher-title"
+                             aria-describedby="researcher-description">
+                            <div class="stakeholder-card-header"></div>
+                            <h3 id="researcher-title">Researcher</h3>
+                            <p id="researcher-description">Academic researchers and scholars who depend on library resources for their work.</p>
+                        </div>
+
+                        <div class="stakeholder-card" data-type="librarian-archivist"
+                             onclick="selectStakeholder(this, 'librarian-archivist')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectStakeholder(this, 'librarian-archivist'); }"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="librarian-archivist-title"
+                             aria-describedby="librarian-archivist-description">
+                            <div class="stakeholder-card-header"></div>
+                            <h3 id="librarian-archivist-title">Librarian/ <br>Archivist</h3>
+                            <p id="librarian-archivist-description">Professional librarians and archivists who manage collections and provide user services.</p>
+                        </div>
+
+                        <div class="stakeholder-card" data-type="library-staff"
+                             onclick="selectStakeholder(this, 'library-staff')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectStakeholder(this, 'library-staff'); }"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="library-staff-title"
+                             aria-describedby="library-staff-description">
+                            <div class="stakeholder-card-header"></div>
+                            <h3 id="library-staff-title">Library/Archives Staff</h3>
+                            <p id="library-staff-description">Support staff who assist with daily operations, circulation, and user support.</p>
+                        </div>
+
+                        <div class="stakeholder-card" data-type="library-it"
+                             onclick="selectStakeholder(this, 'library-it')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectStakeholder(this, 'library-it'); }"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="library-it-title"
+                             aria-describedby="library-it-description">
+                            <div class="stakeholder-card-header"></div>
+                            <h3 id="library-it-title">Library IT Professional</h3>
+                            <p id="library-it-description">Technical staff responsible for library systems, digital infrastructure, and technology support.</p>
+                        </div>
+
+                        <div class="stakeholder-card" data-type="software-developer"
+                             onclick="selectStakeholder(this, 'software-developer')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectStakeholder(this, 'software-developer'); }"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="software-developer-title"
+                             aria-describedby="software-developer-description">
+                            <div class="stakeholder-card-header"></div>
+                            <h3 id="software-developer-title">Software <br>Developer</h3>
+                            <p id="software-developer-description">Developers who create and maintain library systems and library technology solutions.</p>
+                        </div>
+                        <div class="stakeholder-card" data-type="university-administrator"
+                             onclick="selectStakeholder(this, 'university-administrator')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectStakeholder(this, 'university-administrator'); }"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="university-administrator-title"
+                             aria-describedby="university-administrator-description">
+                            <div class="stakeholder-card-header"></div>
+                            <h3 id="university-administrator-title">University Administrator</h3>
+                            <p id="university-administrator-description">Institutional administrators who oversee budget, policy, and strategic planning for libraries.</p>
+                        </div>
+                        <div class="stakeholder-card" data-type="child-caregiver"
+                             onclick="selectStakeholder(this, 'child-caregiver')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectStakeholder(this, 'child-caregiver'); }"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="child-caregiver-title"
+                             aria-describedby="child-caregiver-description">
+                            <div class="stakeholder-card-header"></div>
+                            <h3 id="child-caregiver-title">Child Caregiver</h3>
+                            <p id="child-caregiver-description">Parents and caregivers who use the library with children.</p>
+                        </div>
+                        <div class="stakeholder-card" data-type="teenager"
+                             onclick="selectStakeholder(this, 'teenager')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectStakeholder(this, 'teenager'); }"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="teenager-title"
+                             aria-describedby="teenager-description">
+                            <div class="stakeholder-card-header"></div>
+                            <h3 id="teenager-title">Teenager</h3>
+                            <p id="teenager-description">Teens who use library resources, services, and spaces after school and on weekends.</p>
+                        </div>
+
+                        <div class="stakeholder-card custom-stakeholder-card" onclick="selectStakeholder(this, 'custom-stakeholder')">
+                            <div class="stakeholder-card-header"></div>
+                            <h3 id="custom-stakeholder-label">Other</h3>
+                            <label for="custom-stakeholder" class="sr-only">Describe another stakeholder type in 200 characters or less.</label>
+                            <textarea 
+                                id="custom-stakeholder" 
+                                placeholder="Describe another stakeholder (200 characters max)..."
+                                maxlength="200"
+                                oninput="updateCustomStakeholder(this)"
+                                onclick="event.stopPropagation()"
+                                aria-labelledby="custom-stakeholder-label"
+                                aria-describedby="stakeholder-char-count"
+                                aria-required="true"
+                            ></textarea>
+                            <div class= "character-count" id="stakeholder-char-count" aria-live="polite">
+                                <span class="current-count">0</span>/200 characters
+                            </div>
+                        </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <!-- Step 4: Stakeholder Values -->
+                <div class="step" 
+                     id="step-4"
+                     aria-labelledby="step4-heading">
+                    <h1 id="step4-heading" tabindex="-1">Select Stakeholder Values</h1>
+                    <p>Consider which values are of concern to that stakeholder. Identify 3 values that are of most concern.</p>
+                    
+                    <div class="selection-counter" id="stakeholder-counter">
+                        0/3 values selected
+                    </div>
+                    
+                    <fieldset class="step-fieldset">
+                        <legend class="sr-only">Stakeholder Values - Select Exactly 3</legend>
+                        <div class="cards-grid">
+                            <div class="value-card"
+                             onclick="selectValue(this, 'Privacy and Consent', 'stakeholder')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Privacy and Consent', 'stakeholder'); }"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="privacy-consent-stakeholder-title"
+                             aria-describedby="privacy-consent-stakeholder-description">
+                            <div class="value-card-header" aria-hidden="true"></div>
+                            <h3 id="privacy-consent-stakeholder-title">Privacy and Consent</h3>
+                            <ul id="privacy-consent-stakeholder-description">
+                                <li>User choice</li>
+                                <li>Data protections</li>
+                            </ul>
+                        </div>
+
+                        <div class="value-card"
+                             onclick="selectValue(this, 'Fiscal Responsibility', 'stakeholder')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Fiscal Responsibility', 'stakeholder'); }"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="fiscal-responsibility-stakeholder-title"
+                             aria-describedby="fiscal-responsibility-stakeholder-description">
+                            <div class="value-card-header"></div>
+                            <h3 id="fiscal-responsibility-stakeholder-title">Fiscal Responsibility</h3>
+                            <ul id="fiscal-responsibility-stakeholder-description">
+                                <li>Budget considerations</li>
+                                <li>Personnel impacts</li>
+                            </ul>
+                        </div>
+
+                        <div class="value-card"
+                             onclick="selectValue(this, 'Alignment', 'stakeholder')"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="alignment-stakeholder-title"
+                             aria-describedby="alignment-stakeholder-description"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Alignment', 'stakeholder'); }">
+                            <div class="value-card-header"></div>
+                            <h3 id="alignment-stakeholder-title">Alignment</h3>
+                            <ul id="alignment-stakeholder-description">
+                                <li>Applying existing guidelines</li>
+                                <li>Professional codes of ethics</li>
+                            </ul>
+                        </div>
+
+                        <div class="value-card"
+                             onclick="selectValue(this, 'Education', 'stakeholder')"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="education-stakeholder-title"
+                             aria-describedby="education-stakeholder-description"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Education', 'stakeholder'); }">
+                            <div class="value-card-header"></div>
+                            <h3 id="education-stakeholder-title">Education</h3>
+                            <ul id="education-stakeholder-description">
+                                <li>Understanding AI operations</li>
+                                <li>AI impacts on student research and student learning experiences</li>
+                                <li>Plagiarism</li>
+                            </ul>
+                        </div>
+
+                        <div class="value-card"
+                             onclick="selectValue(this, 'Care', 'stakeholder')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Care', 'stakeholder'); }"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="care-stakeholder-title"
+                             aria-describedby="care-stakeholder-description">
+                            <div class="value-card-header" aria-hidden="true"></div>
+                            <h3 id="care-stakeholder-title">Care</h3>
+                            <ul id="care-stakeholder-description">
+                                <li>Concern for harms</li>
+                                <li>Relationships</li>
+                                <li>Community</li>
+                            </ul>
+                        </div>
+
+                        <div class="value-card"
+                             onclick="selectValue(this, 'Human-centeredness', 'stakeholder')"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="human-centeredness-stakeholder-title"
+                             aria-describedby="human-centeredness-stakeholder-description"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Human-centeredness', 'stakeholder'); }">
+                            <div class="value-card-header" aria-hidden="true"></div>
+                            <h3 id="human-centeredness-stakeholder-title">Human-centeredness</h3>
+                            <ul id="human-centeredness-stakeholder-description">
+                                <li>Usefulness of AI to the human endeavour</li>
+                                <li>Labor considerations</li>
+                                <li>Including people in AI— i.e., human-in-the-loop</li>
+                            </ul>
+                        </div>
+
+                        <div class="value-card"
+                             onclick="selectValue(this, 'Trust', 'stakeholder')"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="trust-stakeholder-title"
+                             aria-describedby="trust-stakeholder-description"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Trust', 'stakeholder'); }">
+                            <div class="value-card-header"></div>
+                            <h3 id="trust-stakeholder-title">Trust</h3>
+                            <ul id="trust-stakeholder-description">
+                                <li>Transparency</li>
+                                <li>Making sources visible</li>
+                                <li>Clarity about AI implementation</li>
+                                <li>Accuracy of the AI's output</li>
+                                <li>Intellectual Property</li>
+                            </ul>
+                        </div>
+
+                        <div class="value-card"
+                             onclick="selectValue(this, 'Social Responsibility', 'stakeholder')"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="social-responsibility-stakeholder-title"
+                             aria-describedby="social-responsibility-stakeholder-description"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Social Responsibility', 'stakeholder'); }">
+                            <div class="value-card-header"></div>
+                            <h3 id="social-responsibility-stakeholder-title">Social Responsibility</h3>
+                            <ul id="social-responsibility-stakeholder-description">
+                                <li>Diversity</li>
+                                <li>Inclusion</li>
+                                <li>Environmental sustainability</li>
+                                <li>Bias</li>
+                            </ul>
+                        </div>
+
+                        <div class="value-card"
+                             onclick="selectValue(this, 'Service Quality', 'stakeholder')"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="service-quality-stakeholder-title"
+                             aria-describedby="service-quality-stakeholder-description"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Service Quality', 'stakeholder'); }">
+                            <div class="value-card-header"></div>
+                            <h3 id="service-quality-stakeholder-title">Service Quality</h3>
+                            <ul id="service-quality-stakeholder-description">
+                                <li>Integrity of the library</li>
+                                <li>Ensuring the library's ability to deliver quality services</li>
+                            </ul>
+                        </div>
+
+                        <div class="value-card custom-value-card custom-stakeholder-value"
+                            onclick="selectValue(this, 'Custom Value 1', 'stakeholder')"
+                            role="button"
+                            tabindex="0"
+                            aria-label="Add custom stakeholder value"
+                            aria-pressed="false">
+                            <div class="value-card-header"></div>
+                            <h3 id="custom-value-stakeholder-label">Custom Value 1</h3>
+                            <label for="custom-value-stakeholder" class="sr-only">Enter a custom stakeholder value description. Maximum 200 characters.</label>
+                            <textarea 
+                                id="custom-value-stakeholder" 
+                                placeholder="Describe another value (200 characters max)..."
+                                maxlength="200"
+                                oninput="updateCustomValue(this, 'stakeholder')"
+                                onclick="event.stopPropagation()"
+                                aria-labelledby="custom-value-stakeholder-label"
+                                aria-describedby="value-char-hint-stakeholder"
+                                aria-required="true"
+                            ></textarea>
+                            <div class="character-count" id="value-char-count-stakeholder" aria-live="polite">
+                                <span class="current-count">0</span>/200
+                            </div>
+                            <span id="value-char-hint-stakeholder" class="sr-only">
+                                Press Enter or Space to edit the stakeholder value description
+                            </span>
+                        </div>
+
+                        <div class="value-card add-value-button" 
+                             onclick="addCustomStakeholderValueCard()"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); addCustomStakeholderValueCard(); }"
+                             role="button"
+                             tabindex="0"
+                             aria-label="Add custom stakeholder value"
+                             id="add-stakeholder-value-button">
+                            <div class="add-value-icon" aria-hidden="true">+</div>
+                            <div class="add-value-text">Add Custom Value</div>
+                        </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <!-- Step 5: Comparison & Reflection -->
+                <div class="step" 
+                     id="step-5"
+                     aria-labelledby="step5-heading">
+                    <h1 id="step5-heading" tabindex="-1">Compare & Reflect</h1>
+                    <p>Review your selections and answer the reflection questions.</p>
+                    
+                    <fieldset class="step-fieldset">
+                        <legend class="sr-only">Reflection Questions</legend>
+                        <div class="comparison">
+                            <!-- Add Scenario Section -->
+                            <div class="comparison-section">
+                            <h4>Selected Scenario</h4>
+                            <div class="comparison-tags" id="scenario-display"></div>
+                        </div>
+                        
+                        <div class="comparison-section">
+                            <h4>Your Values</h4>
+                            <div class="comparison-tags" id="user-values-display"></div>
+                        </div>
+                        
+                        <div class="comparison-section">
+                            <h4 id="stakeholder-values-title">Stakeholder's Values</h4>
+                            <div class="comparison-tags" id="stakeholder-values-display"></div>
+                        </div>
+                    </div>
+
+                    <div class="comparison">
+                    <div class="reflection">
+                        <div class="question">
+                            <label for="q1" id="q1-label">Values</label>
+                            <p class="text-secondary-small" id="q1-description">Review the values you selected for yourself and your stakeholder(s).
+                            <br> Note where the values agree or disagree across the different stakeholders and which values were left out.
+                            <br> What actions can you take to uphold these values?
+                            </p>
+                            <textarea 
+                                id="q1" 
+                                name="values-reflection"
+                                placeholder="Write your response here."
+                                aria-labelledby="q1-label"
+                                aria-describedby="q1-description"
+                                required
+                            ></textarea>
+                        </div>
+                    
+                        
+                        <div class="question">
+                            <label for="q2" id="q2-label">Stakeholders</label>
+                            <p class="text-secondary-small" id="q2-description">What biases and assumptions came forward when you adopted a different stakeholder perspective?
+                            <br> How did you decide which values to select for that stakeholder?
+                            <br> What other stakeholder viewpoints need to be considered in your scenario?
+                            </p>
+                            <textarea 
+                                id="q2" 
+                                name="stakeholder-reflection"
+                                placeholder="Write your response here."
+                                aria-labelledby="q2-label"
+                                aria-describedby="q2-description"
+                                required
+                            ></textarea>
+                        </div>
+                        
+                        <div class="question">
+                            <label for="q3" id="q3-label">Accountability and Scope</label>
+                            <p class="text-secondary-small" id="q3-description">What are the longer-term effects or potential harms of this AI project?
+                            <br> Who is accountable for potential harms (e.g., the library, library users, or other third-parties)?
+                            <br> What could happen if the AI is implemented beyond its intended scope or purpose?
+                            </p>
+                            <textarea 
+                                id="q3" 
+                                name="accountability-reflection"
+                                placeholder="Write your response here."
+                                aria-labelledby="q3-label"
+                                aria-describedby="q3-description"
+                                required
+                            ></textarea>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="download-section">
+                        <button class="desktop-btn desktop-btn-primary download-button">
+                            <span>&#9113;</span> Print Response
+                        </button>
+                        <button class="start-over-btn">Start Over</button>
+                    </div>
+
+                    </fieldset>
+                </div>
+
+<!-- Navigation -->
+            <nav class="desktop-navigation" aria-label="Step navigation">
+                <div class="navigation-container-right">
+                    <div class="navigation-buttons">
+                        <button class="desktop-btn desktop-btn-secondary" id="desktopBackBtn" onclick="previousStep()">
+                            ← Back
+                        </button>
+                        <button class="desktop-btn desktop-btn-primary" id="desktopNextBtn" onclick="nextStep()" disabled>
+                            Next →
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            
+            </div>
+        </main>   
+    <script src="scripts.js"></script>
+</body>
+</html>
