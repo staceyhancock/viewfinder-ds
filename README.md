@@ -45,5 +45,5 @@ Reflect on and respond to the provided Reflection Prompts. Record your notes and
 ---
 
 ## License & Usage
-**Need to add licence**
+**Need to add license**
 
