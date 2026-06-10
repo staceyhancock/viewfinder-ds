@@ -557,8 +557,8 @@
                              aria-pressed="false"
                              aria-label="Select Faculty stakeholder">
                             <div class="stakeholder-card-header"></div>
-                            <h3>Faculty</h3>
-                            <p>Teaching and research staff who rely on library collections and services for academic work.</p>
+                            <h3>Academic faculty</h3>
+                            <p>Teaching and research staff using statistics and data science for academic work.</p>
                         </div>
 
                         <div class="stakeholder-card" 
@@ -572,44 +572,44 @@
                              aria-describedby="student-description">
                             <div class="stakeholder-card-header"></div>
                             <h3 id="student-title">Student</h3>
-                            <p id="student-description">Undergraduate and graduate students using library resources for research and coursework.</p>
+                            <p id="student-description">Undergraduate and graduate students using and learning statistics and data science for research and coursework.</p>
                         </div>
-                        <div class="stakeholder-card" data-type="patron"
-                             onclick="selectStakeholder(this, 'patron')"
+                        <div class="stakeholder-card" data-type="consultant"
+                             onclick="selectStakeholder(this, 'consultant')"
                              onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectStakeholder(this, 'patron'); }"
                              role="button"
                              tabindex="0"
                              aria-pressed="false"
-                             aria-labelledby="patron-title"
-                             aria-describedby="patron-description">
+                             aria-labelledby="consultant-title"
+                             aria-describedby="consultant-description">
                             <div class="stakeholder-card-header"></div>
-                            <h3 id="patron-title">Patron/Community Member</h3>
-                            <p id="patron-description">Local community members who use library services and resources.</p>
+                            <h3 id="consultant-title">Statistical <br>Consultant</h3>
+                            <p id="consultant-description">Professionals who provide statistical expertise and services to clients.</p>
                         </div>
-                        <div class="stakeholder-card" data-type="library-administrator"
-                             onclick="selectStakeholder(this, 'library-administrator')"
-                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectStakeholder(this, 'library-administrator'); }"
+                        <div class="stakeholder-card" data-type="university-administrator"
+                             onclick="selectStakeholder(this, 'university-administrator')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectStakeholder(this, 'university-administrator'); }"
                              role="button"
                              tabindex="0"
                              aria-pressed="false"
-                             aria-labelledby="library-administrator-title"
-                             aria-describedby="library-administrator-description">
+                             aria-labelledby="university-administrator-title"
+                             aria-describedby="university-administrator-description">
                             <div class="stakeholder-card-header"></div>
-                            <h3 id="library-administrator-title">Library Administrator</h3>
-                            <p id="library-administrator-description">Library directors and senior management responsible for strategic decisions and policy.</p>
+                            <h3 id="university-administrator-title">University <br>Administrator</h3>
+                            <p id="university-administrator-description">Institutional administrators responsible for institutional strategic decisions, budget, and policy.</p>
                         </div>
 
-                        <div class="stakeholder-card" data-type="vendor"
-                             onclick="selectStakeholder(this, 'vendor')"
-                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectStakeholder(this, 'vendor'); }"
+                        <div class="stakeholder-card" data-type="ceo"
+                             onclick="selectStakeholder(this, 'ceo')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectStakeholder(this, 'ceo'); }"
                              role="button"
                              tabindex="0"
                              aria-pressed="false"
-                             aria-labelledby="vendor-title"
-                             aria-describedby="vendor-description">
+                             aria-labelledby="ceo-title"
+                             aria-describedby="ceo-description">
                             <div class="stakeholder-card-header"></div>
-                            <h3 id="vendor-title">Vendor</h3>
-                            <p id="vendor-description">External companies and service providers offering AI tools and technologies to libraries.</p>
+                            <h3 id="ceo-title">Tech company CEO</h3>
+                            <p id="ceo-description">Chief executive officers of tech organizations leading the charge in AI adoption and integration.</p>
                         </div>
 
                         <div class="stakeholder-card" data-type="researcher"
@@ -622,46 +622,46 @@
                              aria-describedby="researcher-description">
                             <div class="stakeholder-card-header"></div>
                             <h3 id="researcher-title">Researcher</h3>
-                            <p id="researcher-description">Academic researchers and scholars who depend on library resources for their work.</p>
+                            <p id="researcher-description"> Academic researchers and scholars who use statistics and data science in their work.</p>
                         </div>
 
-                        <div class="stakeholder-card" data-type="librarian-archivist"
-                             onclick="selectStakeholder(this, 'librarian-archivist')"
-                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectStakeholder(this, 'librarian-archivist'); }"
+                        <div class="stakeholder-card" data-type="data-consumer"
+                             onclick="selectStakeholder(this, 'data-consumer')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectStakeholder(this, 'data-consumer'); }"
                              role="button"
                              tabindex="0"
                              aria-pressed="false"
-                             aria-labelledby="librarian-archivist-title"
-                             aria-describedby="librarian-archivist-description">
+                             aria-labelledby="data-consumer-title"
+                             aria-describedby="data-consumer-description">
                             <div class="stakeholder-card-header"></div>
-                            <h3 id="librarian-archivist-title">Librarian/ <br>Archivist</h3>
-                            <p id="librarian-archivist-description">Professional librarians and archivists who manage collections and provide user services.</p>
+                            <h3 id="data-consumer-title">Data <br>Consumer</h3>
+                            <p id="data-consumer-description">Individuals who use data to inform decision-making in their daily lives.</p>
                         </div>
 
-                        <div class="stakeholder-card" data-type="library-staff"
-                             onclick="selectStakeholder(this, 'library-staff')"
-                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectStakeholder(this, 'library-staff'); }"
+                        <div class="stakeholder-card" data-type="content-creator"
+                             onclick="selectStakeholder(this, 'content-creator')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectStakeholder(this, 'content-creator'); }"
                              role="button"
                              tabindex="0"
                              aria-pressed="false"
-                             aria-labelledby="library-staff-title"
-                             aria-describedby="library-staff-description">
+                             aria-labelledby="content-creator-title"
+                             aria-describedby="content-creator-description">
                             <div class="stakeholder-card-header"></div>
-                            <h3 id="library-staff-title">Library/Archives Staff</h3>
-                            <p id="library-staff-description">Support staff who assist with daily operations, circulation, and user support.</p>
+                            <h3 id="content-creator-title">Content <br>Creator</h3>
+                            <p id="content-creator-description">Individuals whose content becomes AI data sources, e.g., artists, musicians, and writers.</p>
                         </div>
 
-                        <div class="stakeholder-card" data-type="library-it"
-                             onclick="selectStakeholder(this, 'library-it')"
-                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectStakeholder(this, 'library-it'); }"
+                        <div class="stakeholder-card" data-type="community-member"
+                             onclick="selectStakeholder(this, 'community-member')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectStakeholder(this, 'community-member'); }"
                              role="button"
                              tabindex="0"
                              aria-pressed="false"
-                             aria-labelledby="library-it-title"
-                             aria-describedby="library-it-description">
+                             aria-labelledby="community-member-title"
+                             aria-describedby="community-member-description">
                             <div class="stakeholder-card-header"></div>
-                            <h3 id="library-it-title">Library IT Professional</h3>
-                            <p id="library-it-description">Technical staff responsible for library systems, digital infrastructure, and technology support.</p>
+                            <h3 id="community-member-title">Community <br>Member</h3>
+                            <p id="community-member-description">Individuals who engage with data and contribute to the community.</p>
                         </div>
 
                         <div class="stakeholder-card" data-type="software-developer"
@@ -674,43 +674,19 @@
                              aria-describedby="software-developer-description">
                             <div class="stakeholder-card-header"></div>
                             <h3 id="software-developer-title">Software <br>Developer</h3>
-                            <p id="software-developer-description">Developers who create and maintain library systems and library technology solutions.</p>
+                            <p id="software-developer-description">Developers who create and maintain statistical and data science technology solutions.</p>
                         </div>
-                        <div class="stakeholder-card" data-type="university-administrator"
-                             onclick="selectStakeholder(this, 'university-administrator')"
-                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectStakeholder(this, 'university-administrator'); }"
+                        <div class="stakeholder-card" data-type="government-official"
+                             onclick="selectStakeholder(this, 'government-official')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectStakeholder(this, 'government-official'); }"
                              role="button"
                              tabindex="0"
                              aria-pressed="false"
-                             aria-labelledby="university-administrator-title"
-                             aria-describedby="university-administrator-description">
+                             aria-labelledby="government-official-title"
+                             aria-describedby="government-official-description">
                             <div class="stakeholder-card-header"></div>
-                            <h3 id="university-administrator-title">University Administrator</h3>
-                            <p id="university-administrator-description">Institutional administrators who oversee budget, policy, and strategic planning for libraries.</p>
-                        </div>
-                        <div class="stakeholder-card" data-type="child-caregiver"
-                             onclick="selectStakeholder(this, 'child-caregiver')"
-                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectStakeholder(this, 'child-caregiver'); }"
-                             role="button"
-                             tabindex="0"
-                             aria-pressed="false"
-                             aria-labelledby="child-caregiver-title"
-                             aria-describedby="child-caregiver-description">
-                            <div class="stakeholder-card-header"></div>
-                            <h3 id="child-caregiver-title">Child Caregiver</h3>
-                            <p id="child-caregiver-description">Parents and caregivers who use the library with children.</p>
-                        </div>
-                        <div class="stakeholder-card" data-type="teenager"
-                             onclick="selectStakeholder(this, 'teenager')"
-                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectStakeholder(this, 'teenager'); }"
-                             role="button"
-                             tabindex="0"
-                             aria-pressed="false"
-                             aria-labelledby="teenager-title"
-                             aria-describedby="teenager-description">
-                            <div class="stakeholder-card-header"></div>
-                            <h3 id="teenager-title">Teenager</h3>
-                            <p id="teenager-description">Teens who use library resources, services, and spaces after school and on weekends.</p>
+                            <h3 id="government-official-title">Government Official</h3>
+                            <p id="government-official-description">Public officials who use data to make decisions affecting policies and funding.</p>
                         </div>
 
                         <div class="stakeholder-card custom-stakeholder-card" onclick="selectStakeholder(this, 'custom-stakeholder')">
