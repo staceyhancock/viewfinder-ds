@@ -575,7 +575,7 @@ h1 {
    Stakeholder Cards
     */
    .stakeholder-card {
-    background-color: #2d4a87;
+    background-color: var(--primary-blue);
     border: 2px solid transparent;
     border-radius: var(--radius-md);
     padding: var(--spacing-xl);
@@ -640,7 +640,7 @@ h1 {
 }
 
 .stakeholder-card:hover {
-    background-color: #3f5ca7ce;
+    background-color: var(--primary-blue);
     transform: translateY(-4px);
     box-shadow: var(--shadow-xl);
     border: 2px solid var(--primary-blue-light);
@@ -668,7 +668,7 @@ h1 {
 }
 
 .stakeholder-card.selected {
-    background-color: #3f5ca7;
+    background-color: var(--primary-blue);
     border: 3px solid var(--white);
     box-shadow: var(--shadow-stakeholder), 0 0 0 4px var(--primary-blue-darker);
     transform: translateY(-2px);
@@ -700,7 +700,7 @@ h1 {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(30, 60, 120, 0.85);
+    background-color: var(--primary-blue);
     z-index: 1;
     pointer-events: none;
 }
