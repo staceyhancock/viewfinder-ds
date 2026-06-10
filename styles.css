@@ -3,18 +3,24 @@
     --sidebar-wide: 380px;
     --sidebar-width: 320px;
     /* Colors */
-    --primary-blue: #B44453;
-    --primary-blue-light: #DA9E9E;
-    --primary-blue-dark: #A43E4B;
-    --primary-blue-darker: #953844;
-    --teal: #26788E;
-    --teal-light: #7DCAD0;
-    --teal-dark: #236D81;
-    --teal-darker: #206375;
-    --purple: #E99164;         
-    --purple-light: #EB9B72;
-    --purple-bg: #F0C9B5;     
-    --purple-accent: #E57A44;
+    --primary-col: #8FB946;
+    --primary-col-light: #C9DDA6;
+    --primary-col-dark: #80A73F;
+    --primary-col-darker: #617E30;
+    --scenario-col: #B94655;         
+    --scenario-col-light: #DDA6AD;
+    --scenario-col-bg: #DDA6AD;     
+    --scenario-col-accent: #7E303A;
+    --values-col: #46B9AA;
+    --values-col-light: #A6DDD6;
+    --values-col-dark: #3FA799;
+    --values-col-darker: #307E74;
+    --stakeholder-col: #7146B9;         
+    --stakeholder-col-light: #BBA6DD;
+    --stakeholder-col-dark: #653FA7;
+    --stakeholder-col-darker: #4D307E;
+    --stakeholder-col-bg: #DACFED;     
+    --stakeholder-col-accent: #4D307E;
     
     /* Text Colors */
     --text-primary: #2d2d2d;    
@@ -24,6 +30,9 @@
     
     /* Background Colors */
     --bg-light: #f8f9fa;
+    --bg-complete: #617E30;
+    --bg-current: #617E30;
+    --bg-shared: #617E30;
     
     /* Border Colors */
     --border-light: #f0f0f0;
@@ -49,10 +58,10 @@
     --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);;
     --shadow-xl: 0 8px 24px rgba(0, 0, 0, 0.15);
-    --shadow-blue: 0 4px 12px rgba(70, 119, 177, 0.3);
-    --shadow-teal: 0 2px 8px rgba(124, 162, 151, 0.3);
-    --shadow-purple: 0 8px 24px rgba(159, 122, 234, 0.15);
-    --shadow-stakeholder: 0 8px 24px rgba(124, 162, 151, 0.3);
+    --shadow-primary: 0 4px 12px rgba(143, 185, 70, 0.15);
+    --shadow-values: 0 2px 8px rgba(70, 185, 170, 0.15);
+    --shadow-scenario: 0 8px 24px rgba(185, 70, 85, 0.15);
+    --shadow-stakeholder: 0 8px 24px rgba(113, 70, 185, 0.15);
     
     /* Transitions */
     --transition-normal: all 0.3s ease;
@@ -164,7 +173,7 @@ body {
 }
 
 .worksheet-form h3 {
-    color: var(--primary-blue);
+    color: var(--primary-col);
     font-size: 1.2rem;
     margin-bottom: var(--spacing-lg);
     font-weight: normal;
@@ -175,7 +184,7 @@ body {
 }
 
 .step-heading {
-    color: var(--teal);
+    color: var(--values-col);
     font-size: 1.1rem;
     margin-bottom: 10px;
     font-weight: 600;
@@ -208,7 +217,7 @@ body {
 }
 
 .sidebar h4 {
-    color: var(--primary-blue);
+    color: var(--primary-col);
     font-size: 1.2rem;
     margin-bottom: var(--spacing-lg);
     font-weight: normal;
@@ -244,19 +253,19 @@ body {
 }
 
 .sidebar-tab.active {
-    color: var(--primary-blue);
+    color: var(--primary-col);
     background: var(--white);
-    border-bottom-color: var(--primary-blue);
+    border-bottom-color: var(--primary-col);
     font-weight: 600;
 }
 
 .sidebar-tab:hover:not(.active) {
-    color: var(--primary-blue-light);
+    color: var(--primary-col-light);
     background: rgba(70, 119, 177, 0.05);
 }
 
 .sidebar-tab:hover {
-    color: var(--primary-blue-light);
+    color: var(--primary-col-light);
     background: var(--bg-light);
 }
 
@@ -313,7 +322,7 @@ body {
 /* Desktop Header */
 .desktop-header {
     background: var(--white);
-    color: var(--primary-blue);
+    color: var(--primary-col);
     padding: var(--spacing-3xl) var(--spacing-4xl);
     position: sticky;
     top: 0;
@@ -337,11 +346,11 @@ body {
 }
 
 .progress-step.completed {
-    background: #576fae;
+    background: var(--bg-complete);
 }
 
 .progress-step.current {
-    background: #3f5ca7;
+    background: var(--bg-current);
 }
 
 .desktop-title,
@@ -406,7 +415,7 @@ h1 {
 
 .step h3,
 .step h4 {
-    color: var(--primary-blue);
+    color: var(--primary-col);
     margin-bottom: var(--spacing-xl);
     font-size: 1.1rem;
     font-weight: 600;
@@ -457,13 +466,13 @@ h1 {
 .scenario-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-xl);
-    border-color: var(--purple-light);
+    border-color: var(--scenario-col-light);
 }
 
 .scenario-card.selected {
-    border-color: var(--purple);
-    background-color: var(--purple-bg);
-    box-shadow: var(--shadow-purple);
+    border-color: var(--scenario-col);
+    background-color: var(--scenario-col-bg);
+    box-shadow: var(--shadow-scenario);
 }
 
 .scenario-card-header {
@@ -482,7 +491,7 @@ h1 {
 }
 
 .scenario-card h3 {
-    color: var(--purple);
+    color: var(--scenario-col);
     font-size: 1.3rem;
     margin-bottom: var(--spacing-md);
     font-weight: 600;
@@ -498,7 +507,7 @@ h1 {
 }
 
 .scenario-card-stage {
-    background-color: var(--purple);
+    background-color: var(--scenario-col);
     color: var(--white);
     padding: var(--spacing-sm) 16px;
     border-radius: var(--radius-md);
@@ -538,12 +547,12 @@ h1 {
 }
 .custom-scenario-card:hover {
     transform: none;
-    border-color: var(--purple);
+    border-color: var(--scenario-col);
     box-shadow: var(--shadow-md);
 }
 
 .custom-scenario-card h3 {
-    color: var(--purple);
+    color: var(--scenario-col);
     font-size: 1.3rem;
     margin-bottom: var(--spacing-md);
     font-weight: 600;
@@ -567,7 +576,7 @@ h1 {
 
 .custom-scenario-card textarea:focus {
     outline: none;
-    border-color: var(--purple);
+    border-color: var(--scenario-col);
     box-shadow: 0 0 0 3px rgba(159, 122, 234, 0.1);
 }
 
@@ -575,7 +584,7 @@ h1 {
    Stakeholder Cards
     */
    .stakeholder-card {
-    background-color: var(--primary-blue);
+    background-color: var(--stakeholder-col-bg);
     border: 2px solid transparent;
     border-radius: var(--radius-md);
     padding: var(--spacing-xl);
@@ -640,10 +649,10 @@ h1 {
 }
 
 .stakeholder-card:hover {
-    background-color: var(--primary-blue);
+    background-color: var(--stakeholder-col-bg);
     transform: translateY(-4px);
     box-shadow: var(--shadow-xl);
-    border: 2px solid var(--primary-blue-light);
+    border: 2px solid var(--stakeholder-col-light);
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -656,7 +665,7 @@ h1 {
     padding: 4px 8px;
     border-radius: var(--radius-md);
     font-size: 0.8rem;
-    color: var(--primary-blue-dark);
+    color: var(--stakeholder-col-dark);
     opacity: 0;
     transform: translateY(10px);
     transition: all 0.3s ease;
@@ -668,9 +677,9 @@ h1 {
 }
 
 .stakeholder-card.selected {
-    background-color: var(--primary-blue);
+    background-color: var(--stakeholder-col);
     border: 3px solid var(--white);
-    box-shadow: var(--shadow-stakeholder), 0 0 0 4px var(--primary-blue-darker);
+    box-shadow: var(--shadow-stakeholder), 0 0 0 4px var(--stakeholder-col-darker);
     transform: translateY(-2px);
 }
 
@@ -700,7 +709,7 @@ h1 {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--primary-blue);
+    background-color: var(--stakeholder-col);
     z-index: 1;
     pointer-events: none;
 }
@@ -717,7 +726,7 @@ h1 {
     padding: var(--spacing-xl);
     background-color: var(--white);
     border: 3px solid var(--white);
-    box-shadow: var(--shadow-stakeholder), 0 0 0 4px var(--primary-blue-darker);
+    box-shadow: var(--shadow-stakeholder), 0 0 0 4px var(--stakeholder-col-darker);
     background-image: none;
     width: 200px;
     height: 280px;
@@ -726,9 +735,9 @@ h1 {
     aspect-ratio: 5/7;
     transition: all 0.3s ease;
 }.custom-stakeholder-card.has-content {
-    background-color: var(--primary-blue);
+    background-color: var(--primary-col);
     border: 3px solid var(--white);
-    box-shadow: var(--shadow-stakeholder), 0 0 0 4px var(--primary-blue-darker);
+    box-shadow: var(--shadow-stakeholder), 0 0 0 4px var(--stakeholder-col-darker);
 }
 
 .custom-stakeholder-card.has-content h3 {
@@ -737,9 +746,9 @@ h1 {
 
 .custom-stakeholder-card:hover {
     transform: none;
-    background-color: var(--primary-blue-dark);
+    background-color: var(--stakeholder-col-dark);
     border: 3px solid var(--white);
-    box-shadow: var(--shadow-stakeholder), 0 0 0 4px var(--primary-blue-darker);
+    box-shadow: var(--shadow-stakeholder), 0 0 0 4px var(--stakeholder-col-darker);
 }
 
 .custom-stakeholder-card:hover h3 {
@@ -769,23 +778,23 @@ h1 {
 .custom-stakeholder-card.has-content textarea {
     background-color: rgba(255, 255, 255, 0.9);
     border-color: var(--white);
-    color: var(--primary-blue-dark);
+    color: var(--stakeholder-col-dark);
 }
 
 .custom-stakeholder-card:hover textarea {
     background-color: rgba(255, 255, 255, 0.95);
     border-color: var(--white);
-    color: var(--primary-blue-darker);
+    color: var(--stakeholder-col-darker);
 }
 
 .custom-stakeholder-card textarea:focus {
     outline: none;
-    border-color: var(--primary-blue);
+    border-color: var(--stakeholder-col);
     box-shadow: 0 0 0 3px rgba(70, 119, 177, 0.1);
 }
 
 .custom-stakeholder-card h3 {
-    color: var(--primary-blue);
+    color: var(--stakeholder-col);
     margin-bottom: var(--spacing-md);
     font-size: 1.1rem;
 }
@@ -816,17 +825,17 @@ h1 {
 .value-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-xl);
-    border-color: var(--teal-light);
+    border-color: var(--values-col-light);
 }
 
 .value-card.selected {
-    border-color: var(--teal);
+    border-color: var(--values-col);
     background-color: var(--bg-light);
     box-shadow: var(--shadow-xl);
 }
 
 .value-card h3 {
-    color: var(--teal);
+    color: var(--values-col);
     font-size: 1.4rem;
     margin-bottom: var(--spacing-md);
     font-weight: 600;
@@ -850,7 +859,7 @@ h1 {
 
 .value-card li:before {
     content: "•";
-    color: var(--teal);
+    color: var(--values-col);
     position: absolute;
     left: 0;
 }
@@ -866,7 +875,7 @@ h1 {
 
 .custom-value-card:hover {
     transform: none;
-    border-color: var(--teal);
+    border-color: var(--values-col);
     box-shadow: var(--shadow-md);
 }
 
@@ -886,7 +895,7 @@ h1 {
 
 .custom-value-card textarea:focus {
     outline: none;
-    border-color: var(--teal);
+    border-color: var(--values-col);
     box-shadow: 0 0 0 3px rgba(124, 162, 151, 0.1);
 }
 
@@ -920,7 +929,7 @@ h1 {
 }
 
 .delete-custom-card:hover {
-    color: var(--teal-dark);
+    color: var(--values-col-dark);
 }
 
 /* Value Cards */
@@ -945,18 +954,18 @@ h1 {
 
 .add-value-button:hover {
     opacity: 1;
-    border-color: var(--teal);
+    border-color: var(--values-col);
     transform: translateY(-4px);
 }
 
 .add-value-icon {
     font-size: 2rem;
-    color: var(--teal);
+    color: var(--values-col);
     margin-bottom: var(--spacing-md);
 }
 
 .add-value-text {
-    color: var(--teal);
+    color: var(--values-col);
     font-size: 1.1rem;
 }
 
@@ -964,7 +973,7 @@ h1 {
    Selection Counting
     */
 .selection-counter {
-    background: var(--teal);
+    background: var(--values-col);
     color: var(--white);
     padding: var(--spacing-md) var(--spacing-xl);
     border-radius: var(--radius-lg);
@@ -972,12 +981,12 @@ h1 {
     text-align: center;
     margin: var(--spacing-xl) 0;
     font-weight: 600;
-    box-shadow: var(--shadow-teal);
+    box-shadow: var(--shadow-values);
 }
 
 .selection-counter.complete {
-    background: var(--primary-blue);
-    box-shadow: var(--shadow-blue);
+    background: var(--primary-col);
+    box-shadow: var(--shadow-primary);
 }
 
 /* Reflect and Compare Layout */
@@ -993,7 +1002,7 @@ h1 {
 }
 
 .comparison-section h4 {
-    color: var(--primary-blue);
+    color: var(--primary-col);
     font-size: 1.1rem;
     margin-bottom: var(--spacing-md);
     font-weight: 600;
@@ -1016,7 +1025,7 @@ h1 {
     }
 
     .shared-tag {
-        background: #5c7bc9;
+        background: var(--bg-shared);
         color: #ffffff;
         border: 2px solid #e4e7e7;
     }
@@ -1051,7 +1060,7 @@ h1 {
 
 .question textarea:focus {
     outline: none;
-    border-color: var(--primary-blue);
+    border-color: var(--primary-col);
     box-shadow: 0 0 0 3px rgba(70, 119, 177, 0.1);
 }
 
@@ -1065,7 +1074,7 @@ h1 {
 }
 
 .step-5 h3 {
-    color: var(--primary-blue);
+    color: var(--primary-col);
     font-size: 2.2rem;  
     font-weight: 700;   
     margin-bottom: var(--spacing-2xl);
@@ -1209,17 +1218,17 @@ h1 {
 }
 
 .desktop-btn-primary {
-    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-light) 100%);
+    background: linear-gradient(135deg, var(--primary-col) 0%, var(--primary-col-light) 100%);
     color: var(--white);
-    box-shadow: var(--shadow-blue);
+    box-shadow: var(--shadow-primary);
     position: relative;
     z-index: 1;
 }
 
 .desktop-btn-primary:hover {
-    background: linear-gradient(135deg, var(--primary-blue-dark) 0%, var(--primary-blue) 100%);
+    background: linear-gradient(135deg, var(--primary-col-dark) 0%, var(--primary-col) 100%);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-blue);
+    box-shadow: var(--shadow-primary);
 }
 
 .desktop-btn-primary:disabled {
@@ -1237,7 +1246,7 @@ h1 {
 
 .question label {
     display: block;
-    color: var(--primary-blue);
+    color: var(--primary-col);
     font-weight: 500;      
     margin-bottom: var(--spacing-lg);  
     font-size: 1.3rem;     
@@ -1260,7 +1269,7 @@ h1 {
     width: 40px;
     height: 40px;
     padding: 0;
-    background: var(--primary-blue);
+    background: var(--primary-col);
     color: var(--white);
     border: none;
     border-radius: 50%;
@@ -1367,7 +1376,7 @@ h1 {
     }
 
     .mobile-logo {
-        color: var(--primary-blue);
+        color: var(--primary-col);
         font-weight: bold;
         font-size: 1.2rem;
     }
@@ -1381,14 +1390,14 @@ h1 {
         display: flex;
         align-items: center;
         justify-content: center;
-        color: var(--primary-blue);
+        color: var(--primary-col);
         font-weight: bold;
         font-size: 0.8rem;
         flex-shrink: 0;
     }
 
     .mobile-instructions-btn {
-        background-color: var(--primary-blue);
+        background-color: var(--primary-col);
         color: var(--white);
         border: none;
         padding: var(--spacing-md) var(--spacing-xl);
@@ -1401,7 +1410,7 @@ h1 {
     }
 
     .mobile-instructions-btn:hover {
-        background-color: var(--primary-blue-darker);
+        background-color: var(--primary-col-darker);
         box-shadow: var(--shadow-md);
     }
 
@@ -1447,7 +1456,7 @@ h1 {
         z-index: 1000;
         background: var(--white);
         transition: all 0.3s ease;
-        border-right: 2px solid var(--primary-blue);
+        border-right: 2px solid var(--primary-col);
         box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
         display: flex;
         flex-direction: column;
@@ -1747,7 +1756,7 @@ h1 {
     }
         
     .sidebar-tab:active {
-        background: var(--primary-blue);
+        background: var(--primary-col);
         color: var(--white);
     }
     

@@ -1045,10 +1045,10 @@ function updateComparison() {
         scenarioText = customScenarioText ? `Custom: ${customScenarioText}` : 'Custom Scenario';
     } else {
         const scenarioNames = {
-            'article-summary': 'A third-party service that uses AI to generate brief summaries of research articles for students and faculty. <br>(Project Stage: Post-implementation)',
-            'chatbot-reference': 'A third-party AI chatbot to provide online reference for students on evenings and weekends. <br>Project stage: Information gathering stage, pre-implementation',
-            'automated-metadata': 'A locally-built computer vision tool to create metadata for classification and discovery of digital photographs documenting labor organizing in your area. <br>Project Stage: Mid-implementation, testing the tool on some photographs',
-            'resource-recommendations': 'An open source, AI-powered resource recommender system to help users more easily search and find resources they need from the library databases. <br>Project Stage: Post-implementation'
+            'data-gathering': 'A social media company uses AI to scan users\' public posts, classify posts by level of emotion, and monitor users\' engagement with other posts.<br>Project Stage: Post-implementation',
+            'data-modeling': 'A statistical consulting center is developing a GPT-based chatbot that will conduct the first intake meeting with potential clients to help guide their data analysis. <br>Project stage: Information gathering stage, pre-implementation',
+            'statistics-education': 'A team of instructors for a large coordinated introductory statistics college course plan to use a GPT-based chatbot tutor to help students more easily access tutoring help. <br>Project Stage: Mid-implementation, testing the tool on some students',
+            'data-deployment': 'A company uses a facial recognition AI tool on publicly available data scraped from social media sites and makes their product available to law enforcement. <br>Project Stage: Post-implementation'
         };
         scenarioText = scenarioNames[AppState.selectedScenario] || AppState.selectedScenario;
     }
