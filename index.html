@@ -280,7 +280,7 @@
                             <div class="scenario-card-header"></div>
                             <div>
                                 <h3 id="resource-recommendations-title">Data Deployment</h3>
-                                <p>A company uses a face recognition AI tool on publicly available data scraped from sites such as Facebook, Instagram, and Youtube and makes their product available to law enforcement.</p>
+                                <p>A company uses a facial recognition AI tool on publicly available data scraped from social media sites and makes their product available to law enforcement.</p>
                             </div>
                             <div class="scenario-card-stage" aria-label="Project Stage: Post-implementation">
                                 <span class="stage-label">Project Stage:</span>
@@ -359,11 +359,12 @@
                             <ul id="fiscal-responsibility-description">
                                 <li>Budget considerations</li>
                                 <li>Personnel impacts</li>
+                                <li>Efficiency</li>
                             </ul>
                         </div>
 
                         <div class="value-card"
-                             onclick="selectValue(this, 'Alignment', 'user')"
+                             onclick="selectValue(this, 'Transparency', 'user')"
                              onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Alignment', 'user'); }"
                              role="button"
                              tabindex="0"
@@ -371,10 +372,11 @@
                              aria-labelledby="alignment-title"
                              aria-describedby="alignment-description">
                             <div class="value-card-header"></div>
-                            <h3 id="alignment-title">Alignment</h3>
+                            <h3 id="alignment-title">Transparency</h3>
                             <ul id="alignment-description">
-                                <li>Applying existing guidelines</li>
-                                <li>Professional codes of ethics</li>
+                                <li>Making sources visible</li>
+                                <li>Clarity with users about AI implementation</li>
+                                <li>Accountability</li>
                             </ul>
                         </div>
 
@@ -389,9 +391,9 @@
                             <div class="value-card-header"></div>
                             <h3 id="education-title">Education</h3>
                             <ul id="education-description">
-                                <li>Understanding AI operations</li>
-                                <li>AI impacts on student research and student learning experiences</li>
-                                <li>Plagiarism</li>
+                                <li>Understanding the operations of AI systems</li>
+                                <li>AI impacts on student research</li>
+                                <li>Student learning experiences, plagiarism</li>
                             </ul>
                         </div>
 
@@ -406,9 +408,10 @@
                             <div class="value-card-header"></div>
                             <h3 id="care-title">Care</h3>
                             <ul id="care-description">
-                                <li>Concern for harms</li>
-                                <li>Relationships</li>
+                                <li>Empathy</li>
                                 <li>Community</li>
+                                <li>Thoughtfulness</li>
+                                <li>Minimize harm</li>
                             </ul>
                         </div>
 
@@ -423,14 +426,29 @@
                             <div class="value-card-header" aria-hidden="true"></div>
                             <h3 id="human-centeredness-title">Human-centeredness</h3>
                             <ul id="human-centeredness-description">
-                                <li>Usefulness to human endeavour</li>
                                 <li>Labor considerations</li>
-                                <li>Including people in AI— i.e., human-in-the-loop</li>
+                                <li>Including people in AI — i.e., human-in-the-loop</li>
+                            </ul>
+
+                        </div>
+
+                        <div class="value-card"
+                             onclick="selectValue(this, 'Usefulness', 'user')"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Human-centeredness', 'user'); }"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="human-centeredness-title"
+                             aria-describedby="human-centeredness-description">
+                            <div class="value-card-header" aria-hidden="true"></div>
+                            <h3 id="human-centeredness-title">Human-centeredness</h3>
+                            <ul id="human-centeredness-description">
+                                <li>Usefulness of AI to human endeavour</li>
                             </ul>
                         </div>
 
                         <div class="value-card"
-                             onclick="selectValue(this, 'Trust', 'user')"
+                             onclick="selectValue(this, 'Integrity', 'user')"
                              onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Trust', 'user'); }"
                              role="button"
                              tabindex="0"
@@ -440,11 +458,8 @@
                             <div class="value-card-header" aria-hidden="true"></div>
                             <h3 id="trust-title">Trust</h3>
                             <ul id="trust-description">
-                                <li>Transparency</li>
-                                <li>Making sources visible</li>
-                                <li>Clarity about AI implementation</li>
-                                <li>Accuracy of AI's output</li>
-                                <li>Intellectual Property</li>
+                                <li>Honesty</li>
+                                <li>Moral soundness</li>
                             </ul>
                         </div>
 
@@ -459,15 +474,15 @@
                             <div class="value-card-header"></div>
                             <h3 id="social-responsibility-title">Social Responsibility</h3>
                             <ul id="social-responsibility-description">
-                                <li>Diversity</li>
-                                <li>Inclusion</li>
                                 <li>Environmental sustainability</li>
-                                <li>Bias</li>
+                                <li>Diversity</li>
+                                <li>Equity</li>
+                                <li>Justice</li>
                             </ul>
                         </div>
 
                         <div class="value-card"
-                             onclick="selectValue(this, 'Service Quality', 'user')"
+                             onclick="selectValue(this, 'Accuracy', 'user')"
                              onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Service Quality', 'user'); }"
                              role="button"
                              tabindex="0"
@@ -477,8 +492,9 @@
                             <div class="value-card-header"></div>
                             <h3 id="service-quality-title">Service Quality</h3>
                             <ul id="service-quality-description">
-                                <li>Integrity of the library</li>
-                                <li>Ensuring the library's ability to deliver quality services</li>
+                                <li>Validity of AI output</li>
+                                <li>Reproducibility and reliability</li>
+                                <li>Truthful</li>
                             </ul>
                         </div>
 
