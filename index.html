@@ -324,8 +324,7 @@
                      id="step-2"
                      aria-labelledby="step2-heading">
                     <h1 id="step2-heading" tabindex="-1">Select Your Values</h1>
-                    <p>Consider which values are of concern to you in your scenario. Identify 3 values that are of most concern.
-</p>
+                    <p>Consider which values are of concern to you in your scenario. Identify 3 values that are of most concern.</p>
                     
                     <div class="selection-counter" id="user-counter">
                         0/3 values selected
@@ -368,15 +367,15 @@
 
                         <div class="value-card"
                              onclick="selectValue(this, 'Transparency', 'user')"
-                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Alignment', 'user'); }"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Transparency', 'user'); }"
                              role="button"
                              tabindex="0"
                              aria-pressed="false"
-                             aria-labelledby="alignment-title"
-                             aria-describedby="alignment-description">
+                             aria-labelledby="transparency-title"
+                             aria-describedby="transparency-description">
                             <div class="value-card-header"></div>
-                            <h3 id="alignment-title">Transparency</h3>
-                            <ul id="alignment-description">
+                            <h3 id="transparency-title">Transparency</h3>
+                            <ul id="transparency-description">
                                 <li>Making sources visible</li>
                                 <li>Clarity with users about AI implementation</li>
                                 <li>Accountability</li>
@@ -437,30 +436,30 @@
 
                         <div class="value-card"
                              onclick="selectValue(this, 'Usefulness', 'user')"
-                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Human-centeredness', 'user'); }"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Usefulness', 'user'); }"
                              role="button"
                              tabindex="0"
                              aria-pressed="false"
-                             aria-labelledby="human-centeredness-title"
-                             aria-describedby="human-centeredness-description">
+                             aria-labelledby="usefulness-title"
+                             aria-describedby="usefulness-description">
                             <div class="value-card-header" aria-hidden="true"></div>
-                            <h3 id="human-centeredness-title">Human-centeredness</h3>
-                            <ul id="human-centeredness-description">
+                            <h3 id="usefulness-title">Usefulness</h3>
+                            <ul id="usefulness-description">
                                 <li>Usefulness of AI to human endeavour</li>
                             </ul>
                         </div>
 
                         <div class="value-card"
                              onclick="selectValue(this, 'Integrity', 'user')"
-                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Trust', 'user'); }"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Integrity', 'user'); }"
                              role="button"
                              tabindex="0"
                              aria-pressed="false"
-                             aria-labelledby="trust-title"
-                             aria-describedby="trust-description">
+                             aria-labelledby="integrity-title"
+                             aria-describedby="integrity-description">
                             <div class="value-card-header" aria-hidden="true"></div>
-                            <h3 id="trust-title">Trust</h3>
-                            <ul id="trust-description">
+                            <h3 id="integrity-title">Integrity</h3>
+                            <ul id="integrity-description">
                                 <li>Honesty</li>
                                 <li>Moral soundness</li>
                             </ul>
@@ -486,15 +485,15 @@
 
                         <div class="value-card"
                              onclick="selectValue(this, 'Accuracy', 'user')"
-                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Service Quality', 'user'); }"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Accuracy', 'user'); }"
                              role="button"
                              tabindex="0"
                              aria-pressed="false"
-                             aria-labelledby="service-quality-title"
-                             aria-describedby="service-quality-description">
+                             aria-labelledby="accuracy-title"
+                             aria-describedby="accuracy-description">
                             <div class="value-card-header"></div>
-                            <h3 id="service-quality-title">Service Quality</h3>
-                            <ul id="service-quality-description">
+                            <h3 id="accuracy-title">Accuracy</h3>
+                            <ul id="accuracy-description">
                                 <li>Validity of AI output</li>
                                 <li>Reproducibility and reliability</li>
                                 <li>Truthful</li>
@@ -860,22 +859,6 @@
                                 <li>Inclusion</li>
                                 <li>Environmental sustainability</li>
                                 <li>Bias</li>
-                            </ul>
-                        </div>
-
-                        <div class="value-card"
-                             onclick="selectValue(this, 'Service Quality', 'stakeholder')"
-                             role="button"
-                             tabindex="0"
-                             aria-pressed="false"
-                             aria-labelledby="service-quality-stakeholder-title"
-                             aria-describedby="service-quality-stakeholder-description"
-                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Service Quality', 'stakeholder'); }">
-                            <div class="value-card-header"></div>
-                            <h3 id="service-quality-stakeholder-title">Service Quality</h3>
-                            <ul id="service-quality-stakeholder-description">
-                                <li>Integrity of the library</li>
-                                <li>Ensuring the library's ability to deliver quality services</li>
                             </ul>
                         </div>
 
