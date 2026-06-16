@@ -739,22 +739,24 @@
                             <ul id="fiscal-responsibility-stakeholder-description">
                                 <li>Budget considerations</li>
                                 <li>Personnel impacts</li>
+                                <li>Efficiency</li>
                             </ul>
                         </div>
 
                         <div class="value-card"
-                             onclick="selectValue(this, 'Alignment', 'stakeholder')"
+                             onclick="selectValue(this, 'Transparency', 'stakeholder')"
                              role="button"
                              tabindex="0"
                              aria-pressed="false"
-                             aria-labelledby="alignment-stakeholder-title"
-                             aria-describedby="alignment-stakeholder-description"
-                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Alignment', 'stakeholder'); }">
+                             aria-labelledby="transparency-stakeholder-title"
+                             aria-describedby="transparency-stakeholder-description"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Transparency', 'stakeholder'); }">
                             <div class="value-card-header"></div>
-                            <h3 id="alignment-stakeholder-title">Alignment</h3>
-                            <ul id="alignment-stakeholder-description">
-                                <li>Applying existing guidelines</li>
-                                <li>Professional codes of ethics</li>
+                            <h3 id="transparency-stakeholder-title">Transparency</h3>
+                            <ul id="transparency-stakeholder-description">
+                                <li>Making sources visible</li>
+                                <li>Clarity with users about AI implementation</li>
+                                <li>Accountability</li>
                             </ul>
                         </div>
 
@@ -769,9 +771,9 @@
                             <div class="value-card-header"></div>
                             <h3 id="education-stakeholder-title">Education</h3>
                             <ul id="education-stakeholder-description">
-                                <li>Understanding AI operations</li>
-                                <li>AI impacts on student research and student learning experiences</li>
-                                <li>Plagiarism</li>
+                                <li>Understanding the operations of AI systems</li>
+                                <li>AI impacts on student research</li>
+                                <li>Student learning experiences, plagiarism</li>
                             </ul>
                         </div>
 
@@ -786,9 +788,10 @@
                             <div class="value-card-header" aria-hidden="true"></div>
                             <h3 id="care-stakeholder-title">Care</h3>
                             <ul id="care-stakeholder-description">
-                                <li>Concern for harms</li>
-                                <li>Relationships</li>
+                                <li>Empathy</li>
                                 <li>Community</li>
+                                <li>Thoughtfulness</li>
+                                <li>Minimize harm</li>
                             </ul>
                         </div>
 
@@ -803,28 +806,39 @@
                             <div class="value-card-header" aria-hidden="true"></div>
                             <h3 id="human-centeredness-stakeholder-title">Human-centeredness</h3>
                             <ul id="human-centeredness-stakeholder-description">
-                                <li>Usefulness of AI to the human endeavour</li>
                                 <li>Labor considerations</li>
-                                <li>Including people in AI— i.e., human-in-the-loop</li>
+                                <li>Including people in AI — i.e., human-in-the-loop</li>
                             </ul>
                         </div>
 
                         <div class="value-card"
-                             onclick="selectValue(this, 'Trust', 'stakeholder')"
+                             onclick="selectValue(this, 'Usefulness', 'stakeholder')"
                              role="button"
                              tabindex="0"
                              aria-pressed="false"
-                             aria-labelledby="trust-stakeholder-title"
-                             aria-describedby="trust-stakeholder-description"
-                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Trust', 'stakeholder'); }">
+                             aria-labelledby="usefulness-stakeholder-title"
+                             aria-describedby="usefulness-stakeholder-description"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Usefulness', 'stakeholder'); }">
                             <div class="value-card-header"></div>
-                            <h3 id="trust-stakeholder-title">Trust</h3>
-                            <ul id="trust-stakeholder-description">
-                                <li>Transparency</li>
-                                <li>Making sources visible</li>
-                                <li>Clarity about AI implementation</li>
-                                <li>Accuracy of the AI's output</li>
-                                <li>Intellectual Property</li>
+                            <h3 id="usefulness-stakeholder-title">Usefulness</h3>
+                            <ul id="usefulness-stakeholder-description">
+                                <li>Usefulness of AI to the human endeavour</li>
+                            </ul>
+                        </div>
+
+                        <div class="value-card"
+                             onclick="selectValue(this, 'Integrity', 'stakeholder')"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="integrity-stakeholder-title"
+                             aria-describedby="integrity-stakeholder-description"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Integrity', 'stakeholder'); }">
+                            <div class="value-card-header"></div>
+                            <h3 id="integrity-stakeholder-title">Integrity</h3>
+                            <ul id="integrity-stakeholder-description">
+                                <li>Honesty</li>
+                                <li>Moral soundness</li>
                             </ul>
                         </div>
 
@@ -839,10 +853,27 @@
                             <div class="value-card-header"></div>
                             <h3 id="social-responsibility-stakeholder-title">Social Responsibility</h3>
                             <ul id="social-responsibility-stakeholder-description">
-                                <li>Diversity</li>
-                                <li>Inclusion</li>
                                 <li>Environmental sustainability</li>
-                                <li>Bias</li>
+                                <li>Diversity</li>
+                                <li>Equity</li>
+                                <li>Justice</li>
+                            </ul>
+                        </div>
+
+                        <div class="value-card"
+                             onclick="selectValue(this, 'Accuracy', 'stakeholder')"
+                             role="button"
+                             tabindex="0"
+                             aria-pressed="false"
+                             aria-labelledby="accuracy-stakeholder-title"
+                             aria-describedby="accuracy-stakeholder-description"
+                             onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectValue(this, 'Accuracy', 'stakeholder'); }">
+                            <div class="value-card-header"></div>
+                            <h3 id="accuracy-stakeholder-title">Accuracy</h3>
+                            <ul id="accuracy-stakeholder-description">
+                                <li>Validity of AI output</li>
+                                <li>Reproducibility and reliability</li>
+                                <li>Truthful</li>
                             </ul>
                         </div>
 
